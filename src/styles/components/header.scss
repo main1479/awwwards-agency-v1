@@ -1,0 +1,43 @@
+.header {
+	position: relative;
+}
+
+.nav {
+	padding: 5rem 0;
+	padding-bottom: 2rem;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-size: 1.9rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $black;
+		letter-spacing: 1rem;
+		// background: $white;
+	}
+
+	&__button {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		cursor: pointer;
+		padding: 5px;
+		span {
+			display: block;
+			width: 4rem;
+			height: 3px;
+			background: $black;
+		}
+	}
+}
