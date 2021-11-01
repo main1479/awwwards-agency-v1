@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as RightArrow } from '../assets/arrow-right.svg';
 import { MouseContext } from '../context/mouseContext';
 export default function Banner() {
-	const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+	const { cursorChangeHandler } = useContext(MouseContext);
 
 	return (
 		<section className="banner">

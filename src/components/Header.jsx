@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { ReactComponent as UpArrow } from '../assets/up-arrow-circle.svg';
-// import { openMenu, closeMenu } from '../animations/menuAnimations';
 
 import gsap from 'gsap';
+import { MouseContext } from '../context/mouseContext';
 let tl = gsap.timeline();
 
 export const openMenu = (width) => {
@@ -108,6 +108,7 @@ export const closeMenu = () => {
 
 const Header = ({ history, dimensions }) => {
 	const [menuState, setMenuState] = useState({ menuOpened: false });
+	const { cursorChangeHandler } = useContext(MouseContext);
 	useEffect(() => {
 		//Listening for page changes.
 		history.listen(() => {
@@ -118,7 +119,7 @@ const Header = ({ history, dimensions }) => {
 		} else if (menuState.menuOpened === false) {
 			closeMenu();
 		}
-	}, [menuState.menuOpened]);
+	});
 
 	return (
 		<div className="header">
@@ -129,7 +130,11 @@ const Header = ({ history, dimensions }) => {
 							Mainul.
 						</NavLink>
 					</div>
-					<div className="nav-toggle">
+					<div
+						className="nav-toggle"
+						onMouseEnter={() => cursorChangeHandler('hovered')}
+						onMouseLeave={() => cursorChangeHandler('')}
+					>
 						<div onClick={() => setMenuState({ menuOpened: true })} className="hamburger-menu">
 							<span></span>
 							<span></span>
