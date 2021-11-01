@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { ReactComponent as RightArrow } from '../assets/arrow-right.svg';
 import { MouseContext } from '../context/mouseContext';
 export default function Banner() {
@@ -10,14 +11,14 @@ export default function Banner() {
 				<div className="row">
 					<h2 className="heading">
 						<div className="line">
-							<span>Creating unique brands is</span>
+							<span>I Create Amazing Websites</span>
 						</div>
 						<div className="line">
-							<span>what we do.</span>
+							<span>That Looks And Performs Well.</span>
 						</div>
 					</h2>
-					<a
-						href="/"
+					<Link
+						to="/about"
 						className="btn"
 						onMouseEnter={() => cursorChangeHandler('hovered')}
 						onMouseLeave={() => cursorChangeHandler('')}
@@ -26,7 +27,7 @@ export default function Banner() {
 						<span>
 							<RightArrow />
 						</span>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</section>

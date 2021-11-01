@@ -7,7 +7,7 @@ import Overlay from '../components/Overlay';
 const homeAnimation = (animationComplete) => {
 	const tl = gsap.timeline();
 
-	tl.from('.line span', 1.8, {
+	tl.from('.line span', 1, {
 		y: 100,
 		ease: 'power4.out',
 		delay: 1,

@@ -41,6 +41,8 @@
 			position: relative;
 			background: $black;
 			cursor: pointer;
+			height: calc(var(--vh, 1vh) * 50);
+			// width: 100%;
 			&:hover {
 				.case-image {
 					opacity: 0.4;
@@ -48,6 +50,7 @@
 			}
 			.case-details {
 				width: 33.3333vw;
+				overflow: hidden;
 				height: 50vh;
 				height: calc(var(--vh, 1vh) * 50);
 				display: flex;

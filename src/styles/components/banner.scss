@@ -3,6 +3,7 @@
 	height: calc(var(--vh, 1vh) * 50);
 	// padding: 6rem 0;
 	padding-top: 3.5rem;
+	background: $white;
 
 	.row {
 		flex-direction: column;
@@ -10,21 +11,23 @@
 	}
 
 	h2 {
-		font-size: clamp(3.6rem, 4.5vw, 4.8rem);
+		font-size: clamp(2.5rem, 4.5vw, 4.8rem);
 		font-weight: 700;
 		line-height: 1.3;
 		color: $white;
 		mix-blend-mode: difference;
 		z-index: 9;
 		position: relative;
+		margin-top: 50px;
 
 		.line {
 			margin-bottom: 8px;
-			height: 56px;
+			// height: 56px;
 			position: relative;
 			overflow: hidden;
 			span {
-				position: absolute;
+				// position: absolute;
+				display: inline-block;
 			}
 		}
 	}
@@ -33,7 +36,7 @@
 		display: flex;
 		width: max-content;
 		align-items: center;
-		margin-top: clamp(3rem, 4vw, 5rem);
+		margin-top: clamp(2rem, 3vw, 3rem);
 		color: $black;
 		font-size: 2.6rem;
 		font-weight: 600;

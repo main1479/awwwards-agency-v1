@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import MouseContextProvider from './context/mouseContext';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-	<MouseContextProvider>
-		<App />
-	</MouseContextProvider>,
+	<BrowserRouter>
+		<MouseContextProvider>
+			<App />
+		</MouseContextProvider>
+	</BrowserRouter>,
 	document.getElementById('root')
 );
 

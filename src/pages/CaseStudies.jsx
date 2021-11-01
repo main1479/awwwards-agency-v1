@@ -1,11 +1,30 @@
+import { useEffect, useState } from 'react';
+import { pageAnimation } from '../App';
+import Overlay from '../components/Overlay';
+
 export default function CaseStudies() {
+	const [animationCompleted, setAnimationCompleted] = useState(false);
+	function animationComplete() {
+		setAnimationCompleted(true);
+	}
+	const title = 'This is the Case Studies page';
+	useEffect(() => {
+		pageAnimation(animationComplete);
+	}, []);
 	return (
-		<div className="page">
-			<div className="container">
-				<div className="row">
-					<h3>This is the Case Studies page</h3>
+		<>
+			{animationCompleted ? null : <Overlay />}
+			<div className="page">
+				<div className="container">
+					<div className="row">
+						<h3>
+							{title.split(' ').map((letter) => (
+								<span key={letter}>{letter}</span>
+							))}
+						</h3>
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
