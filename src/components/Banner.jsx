@@ -23,7 +23,7 @@ export default function Banner() {
 						onMouseEnter={() => cursorChangeHandler('hovered')}
 						onMouseLeave={() => cursorChangeHandler('')}
 					>
-						More about us
+						More about me
 						<span>
 							<RightArrow />
 						</span>
